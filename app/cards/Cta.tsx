@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Pagination } from "swiper/modules"
 import { GameData } from "../data/data"
 import 'swiper/swiper-bundle.css'
-import { AvatarDot } from "../components/Avatar"
+import { Avatar } from "../components/Avatar"
 
 export const Cta = () => {
     return <main className="relative h-[280px] flex ">
@@ -36,7 +36,7 @@ export const Cta = () => {
                             <span className="font-semibold text-3xl text-white block my-4">{item.Name} </span>
                             <div className="text-xs font-normal text-white max-w-[300px] mb-4">{item.Details} </div>
                             <div className="flex items-center gap-2">
-                                <AvatarDot src="/gta.jpg" alt="gta"/>
+                                <Avatar src="/gta.jpg" alt="gta"/>
                              <Badge SVGElement={<Thumb />} label={item.Reviews} /></div>
                         </div>
                     </div>

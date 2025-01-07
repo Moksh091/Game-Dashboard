@@ -103,3 +103,30 @@ export const gamepad = [
         alt: 'FC 25'
     }
 ]
+
+export const users = [
+    {
+        name: 'Alice',
+        url: '/black.png' 
+    },
+    {
+        name: 'joy',
+        url: '/girl.png'
+    },
+    {
+        name: 'louis',
+        url: '/ai.png'
+    },
+    {
+        name: 'len',
+        url: '/white.png'
+    },
+    {
+        name: 'gabrel',
+        url: '/gabrel.jpg'
+    },
+    {
+        name: 'boy',
+        url: '/boy.jpg'
+    }
+]

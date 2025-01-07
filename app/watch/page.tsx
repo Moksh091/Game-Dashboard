@@ -2,6 +2,7 @@
 import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react"
+import { VideoCard } from "../cards/Gamescard";
 
 export default function Watch() {
     const [loading, setLoading] = useState(true);
@@ -14,7 +15,7 @@ export default function Watch() {
                 setData(response.data.items)
             })
             .catch(() => {
-                ('Error while fetchig data')
+                ('Error while fetching data')
             })
             .finally(() => {
                 setLoading(false);
@@ -25,19 +26,33 @@ export default function Watch() {
         return <div>loading...</div>
     }
 
-    return <div>
+    return <div className="grid grid-cols-3 gap-8">
         {data?.map((video) => (
-            <div key={video?.id?.videoId}>                 
+            <VideoCard key={video?.id?.videoId}>
                 {video?.snippet?.thumbnails?.default?.url && (
-                    <Image 
-                        src={video.snippet.thumbnails.default.url}
+                    <Image
+                        src={video.snippet.thumbnails.high.url}
                         alt={video.snippet.title || ''}
-                        width={video.snippet.thumbnails.default.width}
-                        height={video.snippet.thumbnails.default.height}
-                    />
-                )} 
-                <h3>{video?.snippet?.channelTitle}</h3>
-            </div>
+                        width={video.snippet.thumbnails.high.width}
+                        height={video.snippet.thumbnails.high.height}
+                        className="h-64 object-cover rounded-t-xl"
+                    />)}
+                <h3 className="text-white text-xl pl-4 py-4">{video?.snippet?.channelTitle}</h3>
+
+            </VideoCard>
         ))}
     </div>
 }
+
+
+// <div key={video?.id?.videoId}>
+//     {video?.snippet?.thumbnails?.default?.url && (
+//         <Image
+//             src={video.snippet.thumbnails.default.url}
+//             alt={video.snippet.title || ''}
+//             width={video.snippet.thumbnails.default.width}
+//             height={video.snippet.thumbnails.default.height}
+//         />
+//     )}
+//     <h3>{video?.snippet?.channelTitle}</h3>
+// </div>

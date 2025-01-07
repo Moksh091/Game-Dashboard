@@ -26,7 +26,7 @@ export const RightContent = () => {
 
     const plugins = [{
         id: '',
-        beforeDraw: function (chart: any) {
+        beforeDraw: function (chart: Chart) {
             const{ width, height, ctx} = chart;
             ctx.restore();
             ctx.textBaseline = 'middle';

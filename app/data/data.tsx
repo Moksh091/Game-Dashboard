@@ -55,41 +55,49 @@ export const newGameData = [
 
 export const gamepad = [
     {
+        id: 1,
         name: 'GTA VI',
         src: '/gta.jpg',
         alt: 'GTA VI'
     },
     {
+        id: 2,
         name: 'CyberPunk 2077',
         src: '/cyberpunk.webp',
         alt: 'CyberPunk'
     },
     {
+        id: 3,
         name: 'Hitman Triology',
         src: '/hitman.jpg',
         alt: 'Hitman'
     },
     {
+        id: 4,
         name: 'Palworld',
         src: '/palword.jpg',
         alt: 'Palworld'
     },
     {
+        id: 5,
         name: 'Tekken 8',
         src: '/tekken.jpg',
         alt: 'Tekken'
     },
     {
+        id: 6,
         name: 'Resident Evil 9',
         src: '/resident.webp',
         alt: 'Resident'
     },
     {
+        id: 7,
         name: 'Counter Strike 2',
         src: '/cs2.jpg',
         alt: 'Counter Strike'
     },
     {
+        id: 8,
         name: 'FC 25',
         src: '/fc.jpg',
         alt: 'FC 25'

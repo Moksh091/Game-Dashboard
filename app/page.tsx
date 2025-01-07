@@ -1,8 +1,6 @@
 import { Navbar } from "./components/Navbar";
 import { RightContent } from "./components/RightContent";
-import { Sidebar } from "./components/Sidebar";
 import { Valo } from "./Page/Valo";
-import { MixComp } from "./Elements/SidebarComp";
 export default function App() {
   return (
     <main>
